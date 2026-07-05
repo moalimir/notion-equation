@@ -2,6 +2,12 @@
 
 Notion Equation converts LaTeX-style text into Notion's native inline and display equations. It runs only when you press the extension button or its keyboard shortcut.
 
+## Demo
+
+https://github.com/user-attachments/assets/f872b9ef-1ce1-4ce5-bc26-92bc96a0a116
+
+Original demo recorded by [voidCounter/Rohit](https://github.com/voidCounter) for [Noeqtion](https://github.com/voidCounter/noeqtion).
+
 ## Features
 
 - Converts `$inline equations$` and `$$display equations$$` across the current page.
