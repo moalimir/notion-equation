@@ -3,7 +3,7 @@
   "name": "Notion Equation",
   "version": "1.0.0",
   "description": "Convert LaTeX-style text into native inline and display equations in Notion.",
-  "minimum_chrome_version": "109",
+  "minimum_chrome_version": "127",
   "permissions": ["activeTab", "scripting"],
   "background": {
     "service_worker": "background.js"

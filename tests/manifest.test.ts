@@ -9,6 +9,7 @@ describe("development manifest", () => {
     ) as {
       manifest_version: number;
       version: string;
+      minimum_chrome_version?: string;
       permissions?: string[];
       host_permissions?: string[];
       content_scripts?: unknown[];
@@ -21,6 +22,7 @@ describe("development manifest", () => {
 
     assert.equal(manifest.manifest_version, 3);
     assert.equal(manifest.version, "1.0.0");
+    assert.equal(manifest.minimum_chrome_version, "127");
     assert.equal(manifest.action?.default_popup, "popup.html");
     assert.deepEqual(manifest.permissions?.sort(), ["activeTab", "scripting"]);
     assert.equal(manifest.host_permissions, undefined);

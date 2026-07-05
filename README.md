@@ -14,6 +14,7 @@ Original demo recorded by [voidCounter/Rohit](https://github.com/voidCounter) fo
 - Processes multiple equations and equations inside folded toggle blocks.
 - Skips code blocks, existing equation blocks, escaped dollar signs, and malformed delimiters.
 - Reports successful, partial, empty, busy, unsupported-page, and failed runs.
+- Opens the result popup after a keyboard-shortcut conversion finishes.
 - Requests access to the current tab only after an explicit user action.
 
 ## Development

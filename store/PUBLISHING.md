@@ -11,7 +11,7 @@
 
 - [ ] On one disposable Notion page, add inline and display equations, a folded toggle equation, and a code-block equation; run the popup once and confirm only the supported page content converts.
 - [ ] Run it again and confirm the popup reports that no equations remain.
-- [ ] Invoke the keyboard shortcut once and confirm Chrome shows the result badge.
+- [ ] Invoke the keyboard shortcut once and confirm Chrome shows the running badge, then opens the popup with the conversion result.
 
 ## Store dashboard
 
