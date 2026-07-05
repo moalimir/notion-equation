@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
-import { describe, expect, it } from "vitest";
+import assert from "node:assert/strict";
+import { describe, it } from "node:test";
 
 describe("development manifest", () => {
   it("uses the Chrome-only, on-demand permission model", async () => {
@@ -15,12 +16,12 @@ describe("development manifest", () => {
       commands?: Record<string, unknown>;
     };
 
-    expect(manifest.manifest_version).toBe(3);
-    expect(manifest.version).toBe("1.0.0");
-    expect(manifest.action?.default_popup).toBe("popup.html");
-    expect(manifest.permissions?.sort()).toEqual(["activeTab", "scripting"]);
-    expect(manifest.host_permissions).toBeUndefined();
-    expect(manifest.content_scripts).toBeUndefined();
-    expect(manifest.commands).toHaveProperty("convert-page");
+    assert.equal(manifest.manifest_version, 3);
+    assert.equal(manifest.version, "1.0.0");
+    assert.equal(manifest.action?.default_popup, "popup.html");
+    assert.deepEqual(manifest.permissions?.sort(), ["activeTab", "scripting"]);
+    assert.equal(manifest.host_permissions, undefined);
+    assert.equal(manifest.content_scripts, undefined);
+    assert.ok(manifest.commands?.["convert-page"]);
   });
 });
