@@ -40,7 +40,7 @@ To test the unpacked extension:
 2. Open `chrome://extensions` in Chrome.
 3. Enable Developer mode and choose **Load unpacked**.
 4. Select the generated `dist` directory.
-5. Open an editable Notion page and select **Convert equations**, or press `Ctrl+Shift+M` (`Command+Shift+M` on macOS).
+5. Open an editable Notion page and select **Convert equations**, or press `Ctrl+Shift+9` (`Command+Shift+9` on macOS).
 
 ## Release
 

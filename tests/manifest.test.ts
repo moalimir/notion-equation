@@ -13,7 +13,10 @@ describe("development manifest", () => {
       host_permissions?: string[];
       content_scripts?: unknown[];
       action?: { default_popup?: string };
-      commands?: Record<string, unknown>;
+      commands?: Record<
+        string,
+        { suggested_key?: { default?: string; mac?: string } }
+      >;
     };
 
     assert.equal(manifest.manifest_version, 3);
@@ -23,5 +26,9 @@ describe("development manifest", () => {
     assert.equal(manifest.host_permissions, undefined);
     assert.equal(manifest.content_scripts, undefined);
     assert.ok(manifest.commands?.["convert-page"]);
+    assert.deepEqual(manifest.commands?.["convert-page"]?.suggested_key, {
+      default: "Ctrl+Shift+9",
+      mac: "Command+Shift+9",
+    });
   });
 });

@@ -25,7 +25,7 @@ Key features:
 - No accounts, analytics, tracking, or network requests
 - Access limited to the active tab after an explicit user action
 
-Keyboard shortcut: `Ctrl+Shift+M` on Windows, Linux, and ChromeOS; `Command+Shift+M` on macOS. Shortcuts can be changed at `chrome://extensions/shortcuts`.
+Keyboard shortcut: `Ctrl+Shift+9` on Windows, Linux, and ChromeOS; `Command+Shift+9` on macOS. Shortcuts can be changed at `chrome://extensions/shortcuts`.
 
 Notion Equation is an independent extension and is not affiliated with Notion Labs, Inc.
 

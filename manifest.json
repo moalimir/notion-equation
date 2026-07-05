@@ -25,8 +25,8 @@
   "commands": {
     "convert-page": {
       "suggested_key": {
-        "default": "Ctrl+Shift+M",
-        "mac": "Command+Shift+M"
+        "default": "Ctrl+Shift+9",
+        "mac": "Command+Shift+9"
       },
       "description": "Convert LaTeX-style equations on the current Notion page"
     }
