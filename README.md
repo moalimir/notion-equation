@@ -1,65 +1,55 @@
-# Noeqtion — LaTeX to Notion Math Converter
-<a style="display: block;" href="https://addons.mozilla.org/en-US/firefox/addon/notion-math-converter" target="_blank">
-  <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" 
-       alt="Get the Add-on" width="150"/>
-</a>
+# Notion Equation
 
-A browser extension that converts LaTeX-style equations to Notion's native math blocks.
-Notion still hasn't implemented automatic equation rendering for pasted text. If you've ever copied notes with mathematical equations into Notion, you know the pain. Those beautiful `$E=mc^2$` expressions just sit there as plain text. This extension fixes that just with a keyboard shortcut.
+Notion Equation converts LaTeX-style text into Notion's native inline and display equations. It runs only when you press the extension button or its keyboard shortcut.
+
+## Demo
 
 https://github.com/user-attachments/assets/f872b9ef-1ce1-4ce5-bc26-92bc96a0a116
 
-
-_See the extension in action converting LaTeX equations to Notion's native math blocks_
+Original demo recorded by [voidCounter/Rohit](https://github.com/voidCounter) for [Noeqtion](https://github.com/voidCounter/noeqtion).
 
 ## Features
 
-- **Automatic Conversion**: Detects both inline (`$...$`) and block (`$$...$$`) equations.
-- **Keyboard Shortcut**: Convert all equations on the page with `Ctrl+Alt+M` (or use the extension popup).
+- Converts `$inline equations$` and `$$display equations$$` across the current page.
+- Processes multiple equations and equations inside folded toggle blocks.
+- Skips code blocks, existing equation blocks, escaped dollar signs, and malformed delimiters.
+- Reports successful, partial, empty, busy, unsupported-page, and failed runs.
+- Requests access to the current tab only after an explicit user action.
 
-That's it.
+## Development
 
-## How to Use
+Requires Node.js 20 or newer.
 
-1. Install the extension in your browser
-2. Open a Notion page with LaTeX equations (like `$O(n)$` or `$$\int_0^\infty e^{-x^2}dx$$`)
-3. Press `Ctrl+Alt+M` (or click the extension icon and hit "Convert")
-4. Watch your equations transform into Notion's native math format
+```sh
+npm install
+npm run check
+```
 
-## Supported Browsers
+Useful commands:
 
-- **Firefox**: Fully tested and working
-- **Chrome**: Fully tested and working
-- **Other Chromium-based browsers**: Probably work, but not tested
+```sh
+npm run dev       # rebuild source files while they change
+npm run build     # create the unpacked extension in dist/
+npm run test      # run unit tests
+npm run package   # verify and create the Chrome Web Store ZIP
+```
 
-## Installation
-### For Firefox:
+To test the unpacked extension:
 
-<a style="display: block;" href="https://addons.mozilla.org/en-US/firefox/addon/notion-math-converter" target="_blank">
-  <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" 
-       alt="Get the Add-on" width="150"/>
-</a>
+1. Run `npm run build`.
+2. Open `chrome://extensions` in Chrome.
+3. Enable Developer mode and choose **Load unpacked**.
+4. Select the generated `dist` directory.
+5. Open an editable Notion page and select **Convert equations**, or press `Ctrl+Shift+M` (`Command+Shift+M` on macOS).
 
-### For Chrome:
-   - Open `chrome://extensions/`
-   - Enable "Developer mode"
-   - Click "Load unpacked"
-   - Select the extension folder
+## Release
 
-## Technical Notes
+`npm run package` creates `release/notion-equation-1.0.0.zip` with `manifest.json` at the archive root. Store metadata and the manual submission checklist are in [`store/`](store/).
 
-The extension uses Notion's existing shortcuts and features to create math blocks. For display equations (`$$...$$`), it uses the `/math` command. For inline equations (`$...$`), it converts them to Notion's inline format by wrapping them as `$$...$$`.
+The extension does not collect, store, or transmit user data. See [PRIVACY.md](PRIVACY.md).
 
-To reduce visual distraction during conversion, the extension temporarily hides math dialogs using injected CSS. It processes equations sequentially, rescanning the DOM after each conversion to handle Notion's dynamic content updates.
+## Attribution
 
-The extension doesn't inject custom UI or modify Notion's core behavior. It automates what you'd do manually, just much faster.
+This project is based on [Noeqtion](https://github.com/voidCounter/noeqtion), originally created by [voidCounter/Rohit](https://github.com/voidCounter). The original project and contributors remain credited in Git history and [NOTICE.md](NOTICE.md).
 
-## Limitations
-
-This extension works great for standard use cases. But there are some edge cases where it may not work as expected.
-
-If you encounter issues with these or other scenarios, please [open an issue](https://github.com/voidCounter/noeqtion/issues) with details about the specific context where the conversion failed.
-
-## License
-
-Do whatever you want with this code. If it helps you, great. If you improve it, even better.
+Notion Equation is an independent project and is not affiliated with, endorsed by, or sponsored by Notion Labs, Inc.

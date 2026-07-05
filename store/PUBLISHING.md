@@ -1,0 +1,30 @@
+# Chrome Web Store Publishing Checklist
+
+## Build verification
+
+- [ ] Run `npm ci` with Node.js 20 or newer.
+- [ ] Run `npm run package`.
+- [ ] Confirm the generated ZIP is `release/notion-equation-1.0.0.zip`.
+- [ ] Load `dist/` through `chrome://extensions` and complete the Notion smoke tests below.
+
+## Smoke tests
+
+- [ ] On one disposable Notion page, add inline and display equations, a folded toggle equation, and a code-block equation; run the popup once and confirm only the supported page content converts.
+- [ ] Run it again and confirm the popup reports that no equations remain.
+- [ ] Invoke the keyboard shortcut once and confirm Chrome shows the result badge.
+
+## Store dashboard
+
+- [ ] Register or verify the Chrome Web Store developer account.
+- [ ] Create a new item and upload the release ZIP.
+- [ ] Copy product and privacy fields from `LISTING.md`.
+- [ ] Set category to Productivity and language to English.
+- [ ] Upload `../icons/icon-128.png` as the Store icon if the dashboard does not extract it.
+- [ ] Upload `assets/promo-440x280.png` as the small promotional tile.
+- [ ] Upload `assets/screenshot-1280x800.png` as the required screenshot.
+- [ ] Host `PRIVACY.md` at a stable public URL and enter that URL.
+- [ ] Enter the homepage and support URLs from `LISTING.md`.
+- [ ] Declare no data collection, no remote code, and no in-app purchases.
+- [ ] Review all metadata against version 1.0.0, then submit for review.
+
+Do not upload source files, tests, `node_modules`, or the repository root. Upload only the generated ZIP.
