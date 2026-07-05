@@ -14,11 +14,20 @@ if (manifest.manifest_version !== 3) {
 const referencedFiles = new Set([
   manifest.action?.default_popup,
   manifest.background?.service_worker,
+  ...Object.values(manifest.icons ?? {}),
+  ...Object.values(manifest.action?.default_icon ?? {}),
   ...(manifest.content_scripts ?? []).flatMap((entry) => [
     ...(entry.js ?? []),
     ...(entry.css ?? []),
   ]),
 ]);
+
+if (JSON.stringify([...(manifest.permissions ?? [])].sort()) !== JSON.stringify(["activeTab", "scripting"])) {
+  throw new Error("Production permissions must be limited to activeTab and scripting.");
+}
+if (manifest.host_permissions || manifest.content_scripts) {
+  throw new Error("Production build must not request persistent host access.");
+}
 
 for (const file of referencedFiles) {
   if (file) await access(path.join(outdir, file));

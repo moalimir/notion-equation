@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Notion Math Converter</title>
-  <link rel="stylesheet" type="text/css" href="popup.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notion Equation</title>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <h1>Notion Math Converter</h1>
-  <p>Click the button to convert math equations on the current Notion page.</p>
-  <button id="convert-button">Convert</button>
+  <main>
+    <header>
+      <img src="icons/icon-48.png" width="40" height="40" alt="">
+      <div>
+        <h1>Notion Equation</h1>
+        <p class="subtitle">LaTeX to native Notion math</p>
+      </div>
+    </header>
+
+    <p class="description">
+      Convert every supported <code>$inline$</code> and <code>$$display$$</code>
+      equation on this page.
+    </p>
+
+    <button id="convert-button" type="button">
+      <span class="button-label">Convert equations</span>
+      <span class="spinner" aria-hidden="true"></span>
+    </button>
+
+    <p id="status" class="status" role="status" aria-live="polite">
+      Open an editable Notion page to begin.
+    </p>
+
+    <footer>
+      Shortcut <kbd id="shortcut">Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span><kbd>M</kbd>
+    </footer>
+  </main>
   <script src="popup.js"></script>
 </body>
 </html>

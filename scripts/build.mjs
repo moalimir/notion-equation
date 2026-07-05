@@ -13,11 +13,13 @@ await mkdir(outdir, { recursive: true });
 for (const file of ["manifest.json", "popup.html", "popup.css"]) {
   await cp(path.join(root, file), path.join(outdir, file));
 }
+await cp(path.join(root, "icons"), path.join(outdir, "icons"), { recursive: true });
 
 const buildContext = await context({
   entryPoints: {
-    content: path.join(root, "content.js"),
-    popup: path.join(root, "popup.js"),
+    background: path.join(root, "src/background/index.ts"),
+    content: path.join(root, "src/content/index.ts"),
+    popup: path.join(root, "src/popup/index.ts"),
   },
   bundle: true,
   entryNames: "[name]",

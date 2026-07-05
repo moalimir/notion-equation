@@ -1,17 +1,34 @@
 {
   "manifest_version": 3,
-  "name": "Notion Math Converter",
-  "version": "0.0.2",
-  "description": "Converts LaTeX-style math equations to Notion's native format.",
+  "name": "Notion Equation",
+  "version": "1.0.0",
+  "description": "Convert LaTeX-style text into native inline and display equations in Notion.",
+  "minimum_chrome_version": "109",
   "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["https://*.notion.so/*", "https://*.notion.com/*"],
-  "content_scripts": [
-    {
-      "matches": ["https://*.notion.so/*", "https://*.notion.com/*"],
-      "js": ["content.js"]
-    }
-  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
   "action": {
-    "default_popup": "popup.html"
+    "default_title": "Convert equations on this Notion page",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "commands": {
+    "convert-page": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+M",
+        "mac": "Command+Shift+M"
+      },
+      "description": "Convert LaTeX-style equations on the current Notion page"
+    }
   }
 }
