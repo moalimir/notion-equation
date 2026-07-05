@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notion Equation privacy</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1280px; height: 800px; margin: 0; overflow: hidden; }
+    body {
+      color: #fffdf8;
+      background:
+        radial-gradient(circle at 78% 18%, rgb(215 172 80 / 22%), transparent 32%),
+        linear-gradient(145deg, #2e2c28, #171715);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main { width: 1080px; margin: 0 auto; padding-top: 88px; }
+    .brand { display: flex; align-items: center; gap: 15px; color: #d9d4cb; font-size: 15px; }
+    .brand img { width: 48px; height: 48px; }
+    h1 { max-width: 760px; margin: 38px 0 18px; font-size: 64px; line-height: 1.03; letter-spacing: -.055em; }
+    .lead { max-width: 690px; margin: 0; color: #c9c4ba; font-size: 20px; line-height: 1.55; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 60px; }
+    .card { min-height: 220px; padding: 29px; border: 1px solid rgb(255 255 255 / 10%); border-radius: 16px; background: rgb(255 255 255 / 6%); }
+    .icon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 12px; color: #2a251a; background: #e2b85c; font-size: 20px; font-weight: 800; }
+    h2 { margin: 22px 0 10px; font-size: 20px; }
+    .card p { margin: 0; color: #bcb7ae; font-size: 14px; line-height: 1.55; }
+    footer { display: flex; justify-content: space-between; margin-top: 39px; color: #8f8a81; font-size: 12px; }
+    .pill { color: #e2b85c; font-weight: 700; letter-spacing: .08em; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand"><img src="../icons/icon-128.png" alt=""><strong>Notion Equation</strong></div>
+    <h1>Your notes stay in your browser.</h1>
+    <p class="lead">Equation conversion runs locally and only when you ask. No accounts, analytics, tracking, or external requests.</p>
+    <section class="cards">
+      <article class="card"><div class="icon">1</div><h2>Active tab only</h2><p>Temporary access begins when you click Convert or use the shortcut.</p></article>
+      <article class="card"><div class="icon">0</div><h2>Zero data collection</h2><p>Your Notion content and equations are never stored or transmitted.</p></article>
+      <article class="card"><div class="icon">✓</div><h2>Packaged code only</h2><p>No remote scripts, advertising, trackers, or third-party services.</p></article>
+    </section>
+    <footer><span>Independent extension · Not affiliated with Notion Labs, Inc.</span><span class="pill">LOCAL · PRIVATE · ON DEMAND</span></footer>
+  </main>
+</body>
+</html>

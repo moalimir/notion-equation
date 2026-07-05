@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notion Equation before and after</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1280px; height: 800px; margin: 0; overflow: hidden; }
+    body {
+      display: grid;
+      place-items: center;
+      color: #252421;
+      background: linear-gradient(145deg, #e8e3d9, #f5f2eb);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main { width: 1120px; }
+    header { display: flex; align-items: end; justify-content: space-between; margin-bottom: 34px; }
+    .brand { display: flex; align-items: center; gap: 15px; }
+    .brand img { width: 58px; height: 58px; }
+    h1 { margin: 0; font-size: 38px; letter-spacing: -.04em; }
+    header p { margin: 8px 0 0; color: #69655e; font-size: 16px; }
+    .shortcut { padding: 9px 14px; border-radius: 999px; color: #6c5420; background: #f3d99e; font-size: 13px; font-weight: 700; }
+    .comparison { display: grid; grid-template-columns: 1fr 92px 1fr; align-items: stretch; }
+    .panel {
+      height: 510px;
+      padding: 35px 38px;
+      border: 1px solid rgb(37 36 33 / 12%);
+      border-radius: 17px;
+      background: #fff;
+      box-shadow: 0 20px 55px rgb(58 51 40 / 12%);
+    }
+    .label { color: #8b867d; font-size: 12px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    h2 { margin: 18px 0 32px; font-family: Georgia, serif; font-size: 31px; font-weight: 500; }
+    .block { margin: 20px 0; padding: 17px 18px; border-radius: 8px; background: #f6f4ef; font-size: 16px; line-height: 1.55; }
+    .raw { color: #805d14; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .math { font-family: Georgia, serif; font-size: 22px; text-align: center; }
+    .inline-math { font-family: Georgia, serif; font-style: italic; }
+    .toggle { display: flex; align-items: center; gap: 9px; margin-top: 26px; color: #4f4b45; }
+    .arrow { display: grid; place-items: center; color: #fff; font-size: 34px; }
+    .arrow span { display: grid; width: 56px; height: 56px; place-items: center; border-radius: 50%; background: #252421; }
+    .result { margin-top: 31px; color: #256341; font-size: 14px; font-weight: 650; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">
+        <img src="../icons/icon-128.png" alt="">
+        <div><h1>One click. Native Notion math.</h1><p>Convert inline, display, and folded-toggle equations together.</p></div>
+      </div>
+      <div class="shortcut">⌘ + Shift + M</div>
+    </header>
+    <section class="comparison">
+      <article class="panel">
+        <div class="label">Before · plain text</div>
+        <h2>Physics notes</h2>
+        <div class="block">Energy follows <span class="raw">$E = mc^2$</span>.</div>
+        <div class="block raw">$$\int_0^\infty e^{-x^2} dx$$</div>
+        <div class="toggle"><span>▸</span><span>Worked example: <span class="raw">$v = u + at$</span></span></div>
+      </article>
+      <div class="arrow"><span>→</span></div>
+      <article class="panel">
+        <div class="label">After · native equations</div>
+        <h2>Physics notes</h2>
+        <div class="block">Energy follows <span class="inline-math">E = mc²</span>.</div>
+        <div class="block math">∫₀<sup>∞</sup> e<sup>−x²</sup> dx = √π / 2</div>
+        <div class="toggle"><span>▸</span><span>Worked example: <span class="inline-math">v = u + at</span></span></div>
+        <div class="result">✓ Converted 3 equations</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

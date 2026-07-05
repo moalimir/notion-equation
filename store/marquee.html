@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notion Equation marquee</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1400px; height: 560px; margin: 0; overflow: hidden; }
+    body {
+      color: #fffdf8;
+      background:
+        radial-gradient(circle at 78% 24%, rgb(215 172 80 / 30%), transparent 30%),
+        linear-gradient(135deg, #302e2a, #151513 70%);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main { display: grid; height: 100%; grid-template-columns: 1.05fr .95fr; align-items: center; padding: 65px 110px; }
+    .brand { display: flex; align-items: center; gap: 16px; color: #d9d4cb; font-size: 17px; }
+    .brand img { width: 58px; height: 58px; }
+    h1 { max-width: 640px; margin: 31px 0 18px; font-size: 58px; line-height: 1.02; letter-spacing: -.055em; }
+    .copy p { max-width: 540px; margin: 0; color: #c7c1b7; font-size: 19px; line-height: 1.55; }
+    .visual { position: relative; height: 390px; }
+    .sheet { position: absolute; width: 470px; height: 330px; right: 0; top: 29px; padding: 34px 39px; border-radius: 17px; color: #2c2a27; background: #fff; box-shadow: 0 30px 80px rgb(0 0 0 / 32%); transform: rotate(-2deg); }
+    .sheet small { color: #928d84; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .sheet h2 { margin: 15px 0 26px; font-family: Georgia, serif; font-size: 30px; font-weight: 500; }
+    .line { margin: 15px 0; padding: 14px; border-radius: 7px; background: #f6f4ef; font-family: Georgia, serif; font-size: 17px; }
+    .math { font-size: 23px; text-align: center; }
+    .badge { position: absolute; right: 350px; bottom: 10px; padding: 13px 17px; border-radius: 999px; color: #2b261b; background: #e2b85c; box-shadow: 0 12px 30px rgb(0 0 0 / 25%); font-size: 13px; font-weight: 750; transform: rotate(2deg); }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="copy">
+      <div class="brand"><img src="../icons/icon-128.png" alt=""><strong>Notion Equation</strong></div>
+      <h1>LaTeX in.<br>Native Notion math out.</h1>
+      <p>Convert every supported inline and display equation on the active page—locally and on demand.</p>
+    </section>
+    <section class="visual">
+      <article class="sheet">
+        <small>Physics notes</small>
+        <h2>Energy and matter</h2>
+        <div class="line">Energy follows <em>E = mc²</em>.</div>
+        <div class="line math">∫₀<sup>∞</sup> e<sup>−x²</sup> dx = √π / 2</div>
+      </article>
+      <div class="badge">✓ Converted 3 equations</div>
+    </section>
+  </main>
+</body>
+</html>

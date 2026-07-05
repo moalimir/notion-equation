@@ -19,9 +19,10 @@
 - [ ] Create a new item and upload the release ZIP.
 - [ ] Copy product and privacy fields from `LISTING.md`.
 - [ ] Set category to Productivity and language to English.
-- [ ] Upload `../icons/icon-128.png` as the Store icon if the dashboard does not extract it.
-- [ ] Upload `assets/promo-440x280.png` as the small promotional tile.
-- [ ] Upload `assets/screenshot-1280x800.png` as the required screenshot.
+- [ ] Upload `assets/store-icon-128.png` as the 128×128 Store icon.
+- [ ] Upload `assets/promo-440x280.jpg` as the small promotional tile.
+- [ ] Upload the three `assets/screenshot-*.jpg` files as 1280×800 screenshots.
+- [ ] Upload `assets/marquee-1400x560.jpg` as the marquee promotional tile.
 - [ ] Host `PRIVACY.md` at a stable public URL and enter that URL.
 - [ ] Enter the homepage and support URLs from `LISTING.md`.
 - [ ] Declare no data collection, no remote code, and no in-app purchases.
