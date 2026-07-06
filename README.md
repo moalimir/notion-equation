@@ -52,5 +52,3 @@ The extension does not collect, store, or transmit user data. See [PRIVACY.md](P
 ## Attribution
 
 This project is based on [Noeqtion](https://github.com/voidCounter/noeqtion), originally created by [voidCounter/Rohit](https://github.com/voidCounter). The original project and contributors remain credited in Git history and [NOTICE.md](NOTICE.md).
-
-Notion Equation is an independent project and is not affiliated with, endorsed by, or sponsored by Notion Labs, Inc.
