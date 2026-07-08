@@ -1,6 +1,6 @@
 # Notion Equation
 
-Notion Equation converts LaTeX-style text into Notion's native inline and display equations. It runs only when you press the extension button or its keyboard shortcut.
+[Notion Equation](https://chromewebstore.google.com/detail/notion-equation/klnokpbojhaehabdfmhegenjijmpenmn) converts LaTeX-style text into Notion's native inline and display equations. It runs only when you press the extension button or its keyboard shortcut.
 
 ## Demo
 
@@ -43,9 +43,6 @@ To test the unpacked extension:
 4. Select the generated `dist` directory.
 5. Open an editable Notion page and select **Convert equations**, or press `Ctrl+Shift+9` (`Command+Shift+9` on macOS).
 
-## Release
-
-`npm run package` creates `release/notion-equation-1.0.0.zip` with `manifest.json` at the archive root. Store metadata and the manual submission checklist are in [`store/`](store/).
 
 The extension does not collect, store, or transmit user data. See [PRIVACY.md](PRIVACY.md).
 
